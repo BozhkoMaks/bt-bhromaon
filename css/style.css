@@ -777,4 +777,34 @@ a:hover {
     margin-left: 0;
   }
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .main .rooms .rooms-left {
+    justify-content: center;
+  }
+  .main .rooms .for-height-width {
+    width: 100%;
+  }
+  .main .reviews__div {
+    width: 100%;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (max-width: 992px), screen and (-ms-high-contrast: none) and (max-width: 992px) {
+  .main .rooms-right {
+    justify-content: center;
+  }
+  .main .rooms-left {
+    justify-content: center;
+  }
+  .main .rooms__link {
+    align-self: center;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (max-width: 576px), screen and (-ms-high-contrast: none) and (max-width: 576px) {
+  .main .reviews__avatar {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */
+
+
