@@ -777,6 +777,7 @@ a:hover {
     margin-left: 0;
   }
 }
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .main .rooms .rooms-left {
     justify-content: center;
@@ -805,3 +806,5 @@ a:hover {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+
