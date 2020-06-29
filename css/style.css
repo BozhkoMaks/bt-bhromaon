@@ -287,15 +287,6 @@ table {
   font-family: "JosefinSans-Bold";
   src: url(../fonts/Josefin_Sans/static/JosefinSans-Bold.ttf);
 }
-* {
-  transition: all 0.2s ease-in;
-}
-
-*::before,
-*::after {
-  transition: all 0.2s ease-in;
-}
-
 body {
   font-family: "JosefinSans-Regular";
   color: white;
@@ -433,10 +424,12 @@ a:hover {
 .nav__burger span::before {
   content: "";
   top: -10px;
+  transition: all 0.2s ease-in;
 }
 .nav__burger span::after {
   content: "";
   top: 10px;
+  transition: all 0.2s ease-in;
 }
 .nav #nav__burger-input:checked ~ .nav__list {
   visibility: visible;
@@ -446,14 +439,17 @@ a:hover {
 .nav #nav__burger-input:checked ~ .nav__burger span {
   transform: rotate(-45deg);
   background: white;
+  transition: all 0.2s ease-in;
 }
 .nav #nav__burger-input:checked ~ .nav__burger span::before {
   visibility: hidden;
+  transition: all 0.2s ease-in;
 }
 .nav #nav__burger-input:checked ~ .nav__burger span::after {
   transform: rotate(90deg);
   top: 0;
   background: white;
+  transition: all 0.2s ease-in;
 }
 .nav__list {
   display: flex;
@@ -468,6 +464,20 @@ a:hover {
   font-size: 14px;
   padding: 1em;
   text-transform: uppercase;
+}
+
+.btn-top {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 999;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border: 1px solid black;
+  border-radius: 50%;
+  color: white;
+  background: black;
 }
 
 .main .content-why {
@@ -652,6 +662,57 @@ a:hover {
 }
 .footer__socials .fa-pinterest {
   margin-right: 0;
+}
+
+.main .apartments-for-rent .slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main .apartments-for-rent .slider button {
+  position: absolute;
+  z-index: 50;
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: rgba(0, 0, 0, 0.8);
+}
+
+.slick-prev {
+  left: 1%;
+}
+
+.slick-next {
+  right: 1%;
+}
+
+.apartments-for-rent__text {
+  position: absolute;
+  z-index: 50;
+  font-size: 25px;
+  color: black;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.apartments-for-rent__slider {
+  height: 30vh;
+  padding-top: 8px;
+}
+
+.apartments-for-rent__block {
+  display: block;
+  width: 50%;
+  height: 30vh;
+  border: 3px solid black;
+}
+
+.apartments-for-rent__img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 @media screen and (max-width: 992px) {
