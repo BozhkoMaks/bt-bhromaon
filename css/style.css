@@ -694,7 +694,11 @@ a:hover {
   font-size: 25px;
   color: black;
   width: 50%;
+  max-width: 600px;
   background: rgba(255, 255, 255, 0.3);
+}
+.apartments-for-rent__text a {
+  color: black;
 }
 
 .apartments-for-rent__slider {

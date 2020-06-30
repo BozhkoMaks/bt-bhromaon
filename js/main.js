@@ -16,7 +16,6 @@ $(function () {
 // Слайдер
 $(function () {
   $(".slider").slick({
-    // arrows: false,
     slidesToShow: 3,
     speed: 1000,
     slidesToScroll: 1,
@@ -27,6 +26,7 @@ $(function () {
       {
         breakpoint: 768,
         settings: {
+          arrows: false,
           slidesToShow: 1,
         },
       },
