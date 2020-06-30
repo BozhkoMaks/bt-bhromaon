@@ -665,6 +665,10 @@ a:hover {
   margin-right: 0;
 }
 
+.apartments-for-rent {
+  height: 30vh;
+}
+
 .main .apartments-for-rent .slider {
   display: flex;
   align-items: center;
@@ -700,11 +704,6 @@ a:hover {
 }
 .apartments-for-rent__text a {
   color: black;
-}
-
-.apartments-for-rent__slider {
-  height: 30vh;
-  padding-top: 8px;
 }
 
 .apartments-for-rent__block {
