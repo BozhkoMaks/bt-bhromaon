@@ -290,7 +290,6 @@ table {
 body {
   font-family: "JosefinSans-Regular";
   color: white;
-  margin: 15px;
 }
 
 a:hover {
@@ -298,10 +297,46 @@ a:hover {
   color: black;
 }
 
+@keyframes pulse {
+  50% {
+    transform: scale(1.2);
+    color: black;
+  }
+}
 .header {
-  background: url(../img/block1-bg.png) no-repeat;
-  background-size: cover;
   min-height: 100vh;
+}
+.header .platform {
+  position: fixed;
+  top: -20%;
+  left: 0;
+  height: 120%;
+  width: 100%;
+  z-index: -4;
+}
+.header .level3 {
+  background: url(../img/par/Level-1.png) no-repeat center;
+  background-size: cover;
+  /* z-index: -1; */
+}
+.header .level2 {
+  background: url(../img/par/Level-2-2.png) no-repeat center;
+  background-size: cover;
+  /* z-index: -2; */
+}
+.header .level1 {
+  background: url(../img/par/Level-3.png) no-repeat center;
+  background-size: cover;
+  /* z-index: -3; */
+}
+.header .level {
+  position: absolute;
+  top: 0;
+  left: -10%;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 110%;
 }
 .header-content {
   height: 100vh;
@@ -309,6 +344,7 @@ a:hover {
 .header-content .logo {
   font-family: "JosefinSans-Bold";
   text-transform: uppercase;
+  color: white;
   font-size: 48px;
   letter-spacing: 10px;
   margin-bottom: 20px;
@@ -395,8 +431,15 @@ a:hover {
 .nav .logo {
   font-family: "JosefinSans-Bold";
   text-transform: uppercase;
+  color: white;
+  display: block;
+  text-align: center;
   font-size: 24px;
   padding: 0;
+  animation: pulse 4.5s infinite cubic-bezier(0.245, 0.325, 0.51, 1.305) alternate;
+}
+.nav .logo:hover {
+  animation-play-state: paused;
 }
 .nav #nav__burger-input {
   visibility: hidden;
@@ -638,6 +681,32 @@ a:hover {
   color: #5474fd;
   margin-right: 5px;
 }
+.main .contacts__map {
+  height: 50vh;
+  width: 100vw;
+}
+.main .contacts__div {
+  position: absolute;
+  top: 1vh;
+  left: 5px;
+  background: #232323;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 300px;
+}
+.main .contacts__div a {
+  color: white;
+  margin-bottom: 20px;
+}
+.main .contacts__div a:hover {
+  color: black;
+}
+.main .contacts__adress {
+  width: 50%;
+}
 
 .footer {
   padding: 10vh 5vh 3vh 5vh;
@@ -646,6 +715,7 @@ a:hover {
 .footer__logo {
   font-family: "JosefinSans-Bold";
   text-transform: uppercase;
+  color: white;
   font-size: 24px;
 }
 .footer__text {

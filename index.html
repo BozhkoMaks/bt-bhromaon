@@ -12,10 +12,19 @@
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="canvas.png" type="image/x-icon" />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPcIrBANGTX58Rqhb3HFxwZtO8qLL6dD4&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
     <title>BHROMAON</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="main-header">
+      <div class="platform">
+        <div class="level level1" data-speed="10"></div>
+        <div class="level level2" data-speed="5"></div>
+        <div class="level level3" data-speed="1"></div>
+      </div>
       <div class="container">
         <div class="row flex-column">
           <div
@@ -42,7 +51,7 @@
                 ></label>
               </form>
             </div>
-            <div class="header-content__scroll">
+            <div class="header-content__scroll" id="scroll-down">
               <a href="#sticky-nav">
                 <p class="header-content__scroll_text">Scroll Down</p>
                 <i class="fas fa-chevron-down"></i>
@@ -55,23 +64,25 @@
     <nav class="nav" id="sticky-nav">
       <div class="container">
         <div class="row justify-content-between align-items-center">
-          <div class="logo col-4">Bhromaon</div>
+          <div class="col-4">
+            <a href="#main-header" class="logo">Bhromaon</a>
+          </div>
           <input type="checkbox" id="nav__burger-input" />
           <label for="nav__burger-input" class="nav__burger"
             ><span></span
           ></label>
           <ul class="nav__list col-12 col-md-8">
             <li class="nav__item">
-              <a href="#" class="nav__link">Who We Are</a>
+              <a href="#why_choose" class="nav__link">Who We Are</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">What We Do</a>
+              <a href="#appartments" class="nav__link">What We Do</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Travel With Us</a>
+              <a href="#rooms" class="nav__link">Travel With Us</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Contact Us</a>
+              <a href="#contact-us" class="nav__link">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -79,7 +90,7 @@
     </nav>
     <button class="btn-top" id="btn-top">TOP</button>
     <main class="main">
-      <section class="content-why">
+      <section class="content-why" id="why_choose">
         <div class="container">
           <div class="row justify-content-center justify-content-md-between">
             <div class="content-why__content">
@@ -120,7 +131,7 @@
           </div>
         </div>
       </section>
-      <section class="apartments-for-rent">
+      <section class="apartments-for-rent" id="appartments">
         <div class="apartments-for-rent__text">
           Apartments for rent, good price, always free rooms. Phone
           +38(050)123-456-7
@@ -198,7 +209,7 @@
           </div>
         </div>
       </section>
-      <section class="rooms">
+      <section class="rooms" id="rooms">
         <section class="rooms-right">
           <div
             class="container d-flex justify-content-center justify-content-md-start"
@@ -261,6 +272,26 @@
           </div>
         </div>
       </section>
+
+      <section class="contacts" id="contact-us">
+        <div class="container">
+          <div class="row position-relative">
+            <div class="contacts__map" id="map"></div>
+            <div class="contacts__div">
+              <h3 class="contacts__title">Our contacts</h3>
+              <p class="contacts__adress">
+                You can find us here: Metallurgov pr., 11, near McDonald's or
+                check the map
+              </p>
+              <a href="mailto:bhromaon@bhromaon.com" class="contacts_email"
+                >bhromaon@bhromaon.com</a
+              ><a href="tel:+380123456789" class="contacts__phone"
+                >+380 (123) 45-67-89</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
@@ -289,6 +320,7 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/slick.js"></script>
+
     <script src="js/main.js"></script>
   </body>
 </html>
